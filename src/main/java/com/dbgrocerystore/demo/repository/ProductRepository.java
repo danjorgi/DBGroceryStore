@@ -11,4 +11,6 @@ import com.dbgrocerystore.demo.entity.Product;
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     List<Product> findByNameContainingIgnoreCase(String keyword);
     List<Product> findByCategoryIgnoreCase(String category);
+
+    void deleteById(int productId);
 }
